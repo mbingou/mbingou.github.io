@@ -71,6 +71,19 @@
 	  <div class="row">
 		<!--<input type="button" value="显示当前时间" onclick="myDate()"/>-->
                 <div id="div" style="width: 200px; height: 30px;"></div>
+		var i=0;
+	        function myDate(){
+		var now=new Date();
+		var year=now.getFullYear();
+		var month=now.getMonth()+1;
+		var day=now.getDate();
+		var hours=now.getHours();
+		var minutes=now.getMinutes();
+		var seconds=now.getSeconds();
+
+		document.getElementById("div").innerHTML=year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
+	    }
+	    setInterval(myDate,1000);
 	  </div>
 	</div>
   </div>
